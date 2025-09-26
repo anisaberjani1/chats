@@ -42,6 +42,10 @@ class _AuthScreenState extends State<AuthScreen> {
           email: _enteredEmail,
           password: _enteredPassword,
         );
+        //final storageRef = FirebaseStorage.instance.ref().child('user_images').child('${userCredentials.user!.uid}.jpg');
+        //await storageRef.putFile(_selectedImage!);
+        //final imageUrl = await storageRef.getDownloadedURL();
+
       }
     } on FirebaseAuthException catch (error) {
       if (error.code == 'email-already-in-use') {
